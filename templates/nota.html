@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block title %} Result {% endblock %} {% block content %}
+<br />
+<br />
+<br />
+<div class="body">
+  <div class="containera-nota">
+    <h4 style="text-align: center">Detail Pesanan Kamu</h4>
+    <hr />
+    <table>
+      <tr>
+        <td>&nbsp;ID Pesanan</td>
+        <td>&nbsp;: {{ hasil[0] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Nama</td>
+        <td>&nbsp;: {{ hasil[1] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Nomor WhatsApp</td>
+        <td>&nbsp;: {{ hasil[2] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Email</td>
+        <td>&nbsp;: {{ hasil[3] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Mobil</td>
+        <td>&nbsp;: {{ hasil[4] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Untuk Tanggal</td>
+        <td>&nbsp;: {{ hasil[5] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Pengemudi</td>
+        <td>&nbsp;: {{ hasil[6] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Lokasi Penjemputan</td>
+        <td>&nbsp;: {{ hasil[7] }}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;Lokasi Penjemputan</td>
+        <td>&nbsp;: {{ hasil[8] }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div style="text-align: center">
+  <br />
+  <a href="/result"><button class="tombolback-nota">Kembali ke halaman sebelumnya</button></a>
+</div>
+{% endblock %}

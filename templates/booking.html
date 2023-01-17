@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %} Booking Mobil {% endblock %} {% block content %}
+<br />
+<div class="containera-form">
+  <div style="text-align: center">
+    <h1>Form Booking</h1>
+    <br />
+  </div>
+  <form action="" method="post">
+    Nama Lengkap<a style="color: red;">*</a>
+    <input type="text" id="nama" name="nama" required />
+    Nomor WhatsApp<a style="color: red;">*</a>
+    <input type="tel" id="wa" name="wa" required />
+    Email<a style="color: red;">*</a>
+    <input type="email" id="email" name="email" required />
+    Mobil<a style="color: red;">*</a>
+    <select id="mobil" name="mobil" required>
+      <option value=""></option>
+      <option value="Toyota Avanza">Toyota Avanza</option>
+      <option value="Honda Brio">Honda Brio</option>
+      <option value="Toyota Innova">Toyota Innova</option>
+      <option value="Honda Mobilio">Honda Mobilio</option>
+      <option value="Grand Max">Grand Max</option>
+      <option value="Toyota Calya">Toyota Calya</option>
+      <option value="Toyota Hiace">Toyota Hiace</option>
+    </select>
+    Untuk Tanggal<a style="color: red;">*</a>
+    <input type="date" id="tanggal" name="tanggal" required />
+    Pengemudi<a style="color: red;">*</a>
+    <select id="sopir" name="sopir" required>
+      <option value=""></option>
+      <option value="Dengan Sopir">Dengan Driver</option>
+      <option value="Tanpa Sopir">Tanpa Driver</option>
+    </select>
+    Lokasi Penjemputan
+    <input type="text" id="lokasi_penjemputan" name="lokasi_penjemputan" />
+    Lokasi Tujuan
+    <input type="text" id="lokasi_tujuan" name="lokasi_tujuan" />
+    <br>
+    <input type="submit" id="kirim" value="Submit" onclick="kirimPesan()" />
+    <input type="reset" value="Reset" />
+  </form>
+</div>
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

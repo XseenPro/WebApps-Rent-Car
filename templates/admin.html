@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Area</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}" />
+  </head>
+  <body>
+    <div class="col">
+      <div class="na">
+        <ul>
+          <li><a class="active" href="/login/admin">Admin Area</a></li>
+          <li style="float: right"><a class="active" href="/login">Logout</a></li>
+        </ul>
+      </div>
+      <br />
+      <h3 style="text-align: center">Welcome to admin area !</h3>
+      <h4>Data User :</h4>
+      <table id="data_user" style="background-color: rgb(202, 161, 255)">
+        <tr>
+          <th>ID</th>
+          <th>Nama</th>
+          <th>Nomor WhatsApp</th>
+          <th>Email</th>
+          <th>Mobil</th>
+          <th>Untuk Tanggal</th>
+          <th>Sopir</th>
+          <th>Lokasi Penjemputan</th>
+          <th>Lokasi Tujuan</th>
+          <th>Action</th>
+        </tr>
+        {% for baris in data: %}
+        <tr>
+          <td>{{ baris[0] }}</td>
+          <td>{{ baris[1] }}</td>
+          <td>{{ baris[2] }}</td>
+          <td>{{ baris[3] }}</td>
+          <td>{{ baris[4] }}</td>
+          <td>{{ baris[5] }}</td>
+          <td>{{ baris[6] }}</td>
+          <td>{{ baris[7] }}</td>
+          <td>{{ baris[8] }}</td>
+          <td>
+            <a href="/hapus/{{ baris[0] }}"><button class="btn btn-danger">Hapus</button></a>
+            <a href="/ubah/{{ baris[0] }}"><button class="btn btn-primary">Ubah</button></a>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

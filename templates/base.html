@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='boxicons/css/boxicons.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='icofont/icofont.min.css') }}" />
+  </head>
+  <body style="background-color: #f0af0d; background-size: cover">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 3rem; background-color: rgb(118, 22, 243)">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='img/logo.png')}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">&nbsp;&nbsp;Timbang Mlaku</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/booking">Booking Mobil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/mobil">Mobil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/informasi">Informasi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <a href="https://api.whatsapp.com/send?phone=6283817155003" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <script src="{{ url_for('static', filename='js/javascrip.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.js')}}"></script>
+    {% block content %} {% endblock %}
+  </body>
+</html>

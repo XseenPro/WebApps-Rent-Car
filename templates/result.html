@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %} Result {% endblock %} {% block content %}
+<div class="pesanan">
+  <h1>Yeey pesanan kamu telah berhasil</h1>
+  <img src="{{ url_for('static',filename='img/gambar.png')}}" style="width: 20%" />
+  <h2>Kami akan segera menghubungi kamu untuk melakukan konfirmasi</h2>
+  <br />
+  <a href="/result/nota"><button class="tombol-nota"> Detail pesanan kamu</button></a>
+  <br />
+  <br />
+  <a href="/"><button class="button">Kembali ke Halaman Utama</button></a>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %} Ubah Booking {% endblock %} {% block content %}
+<br />
+<div class="containera-form">
+  <div style="text-align: center">
+    <h1>Form Booking</h1>
+    <br />
+  </div>
+<form action="/perbarui" method="post">
+  <input type="hidden" name="id" value="{{ data[0] }}">
+  Nama
+  <input type="text" name="nama" value="{{ data[1] }}"/>
+  Nomor WhatsApp
+  <input type="text" name="wa" value="{{ data[2] }}"/>
+  Email
+  <input type="email" name="email" value="{{ data[3] }}"/>
+  Mobil
+  <select name="mobil">
+    <option value="" {% if( data[4] == '') %} selected {% endif %}></option>
+    <option value="Avanza" {% if( data[4] == 'Avanza') %} selected {% endif %}>Avanza</option>
+    <option value="Xenia" {% if( data[4] == 'Xenia') %} selected {% endif %}>Xenia</option>
+    <option value="Honda Brio"{% if( data[4] == 'Honda Brio') %} selected {% endif %}>Honda Brio</option>
+    <option value="Innova Reborn" {% if( data[4] == 'Innova Reborn') %} selected {% endif %}>Innova Reborn</option>
+    <option value="Forturner" {% if( data[4] == 'Forturner') %} selected {% endif %}>Forturner</option>
+    <option value="Alphard" {% if( data[4] == 'Alphard') %} selected {% endif %}>Alphard</option>
+  </select>
+  Untuk Tanggal
+  <input type="date" name="tanggal" value="{{ data[5] }}"/>
+  Pengemudi
+  <select name="sopir" value="{{ data[6] }}">
+    <option value=""></option>
+    <option value="Dengan Driver">Dengan Driver</option>
+    <option value="Tanpa Driver">Tanpa Driver</option>
+  </select> 
+  Lokasi Penjemputan
+  <input type="text" name="lokasi_penjemputan" value="{{ data[7] }}"/>
+  Lokasi Tujuan
+  <input type="text" name="lokasi_tujuan" value="{{ data[8] }}"/>
+  <input type="submit" value="Submit" />
+  <input type="reset" value="Reset" />
+</form>
+</div>
+</div>
+{% endblock %}
